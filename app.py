@@ -26,7 +26,7 @@ def load_corpus_id(processed_dir: str = PROCESSED_DIR) -> str:
 
 @st.cache_resource
 def load_runtime():
-    """Load indexes + stores once per app session."""
+    """Load indexes + stores once per app session (cached across reruns)."""
     index, metadata, chunk_store = load_faiss_bundle(PROCESSED_DIR)
     bm25 = joblib.load(f"{PROCESSED_DIR}/bm25.joblib")
     instructions = build_answer_instructions()
@@ -43,28 +43,20 @@ def list_pdfs(raw_dir: str = RAW_DIR):
 
 def init_state():
     defaults = {
+        # committed query (what user last submitted / wants to keep)
         "query": "",
+        # draft inside the form (buffer so typing doesn't rerun the whole page)
+        "query_draft": "",
         "last_request_id": None,
         "last_answer": None,
-        "last_results": None,      # reranked top-k
-        "last_candidates": None,   # retrieved candidates
+        "last_results": None,
+        "last_candidates": None,
         "last_latency_ms": None,
         "last_error": None,
     }
     for k, v in defaults.items():
         if k not in st.session_state:
             st.session_state[k] = v
-
-
-def clear_state():
-    # Clear query + outputs; no explicit st.rerun() needed (Streamlit reruns automatically on click)
-    st.session_state["query"] = ""
-    st.session_state["last_request_id"] = None
-    st.session_state["last_answer"] = None
-    st.session_state["last_results"] = None
-    st.session_state["last_candidates"] = None
-    st.session_state["last_latency_ms"] = None
-    st.session_state["last_error"] = None
 
 
 def run_pipeline(
@@ -131,23 +123,6 @@ def main():
     st.set_page_config(page_title="Banking RAG Copilot", layout="wide")
     init_state()
 
-    # --- Small CSS fixes:
-    # 1) Keep query box compact
-    # 2) Hide the "Press Ctrl+Enter to apply" helper text (Streamlit may change DOM; if it stops working, remove safely)
-    st.markdown(
-        """
-        <style>
-          /* Make textarea shorter (approx 2 lines) */
-          [data-testid="stTextArea"] textarea { min-height: 72px; }
-
-          /* Try to hide the helper hint under textarea */
-          [data-testid="stTextArea"] div[data-testid="stWidgetLabel"] + div small { display: none !important; }
-          [data-testid="stTextArea"] small { display: none !important; }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
     st.title("🏦 Banking RAG Copilot (Enterprise-style)")
     st.caption(
         "Hybrid Retrieval (FAISS + BM25) → Cross-Encoder Rerank → Grounded Answer + Citations + Latency + Audit Logs"
@@ -201,57 +176,52 @@ def main():
     show_debug = st.sidebar.checkbox("Show debug panels", value=True)
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
-    # ---------------- Main: Controls ----------------
+    # ---------------- Main: Input + Run ----------------
     st.subheader("Please ask your question here")
 
-    # Use a form so typing does NOT trigger pipeline runs (and avoids UI instability).
-    # NOTE: Streamlit still reruns on typing, but ONLY to update session_state; the expensive pipeline will not run.
+    # Draft buffer:
+    # - query_draft is what user types
+    # - query is "committed" only when user clicks Run RAG
+    # This avoids constant enable/disable flicker while typing.
     with st.form("rag_form", clear_on_submit=False):
-        st.text_area(
+        st.text_input(
             "Query",
-            key="query",
+            key="query_draft",
+            value=st.session_state.get("query") or "",
             placeholder="e.g., What are the categories under PSL?",
-            height=72,
         )
         run_btn = st.form_submit_button("Run RAG", type="primary")
 
-    # Clear button must be BELOW the query box (and not inside the form)
-    c1, c2, c3 = st.columns([3, 1.2, 1.2])
-    with c1:
-        pass
-    with c2:
-        # Keep empty / spacer
-        pass
-    with c3:
-        st.button("Clear", use_container_width=True, on_click=clear_state)
-
     # ---------------- Run pipeline only when submitted ----------------
     if run_btn:
-        q = (st.session_state.get("query") or "").strip()
+        # Commit draft → query (so the field stays filled after submit)
+        st.session_state["query"] = (st.session_state.get("query_draft") or "").strip()
 
+        q = st.session_state["query"]
+
+        # Empty query: show error but DO NOT wipe previous answer/results
         if not q:
             st.session_state["last_error"] = "Please enter a query."
-            st.session_state["last_answer"] = None
         else:
             st.session_state["last_error"] = None
-            request_id = str(uuid.uuid4())
+            request_id_for_error_log = str(uuid.uuid4())
 
             try:
-                with st.spinner("Running retrieval → rerank → generation..."):
-                    req_id, answer, results, candidates, latency_ms = run_pipeline(
-                        q=q,
-                        index=index,
-                        metadata=metadata,
-                        chunk_store=chunk_store,
-                        bm25=bm25,
-                        instructions=instructions,
-                        corpus_id=corpus_id,
-                        retrieve_k=retrieve_k,
-                        final_k=final_k,
-                        alpha=alpha,
-                    )
+                # No spinner / no progress messages (silent run)
+                req_id, answer, results, candidates, latency_ms = run_pipeline(
+                    q=q,
+                    index=index,
+                    metadata=metadata,
+                    chunk_store=chunk_store,
+                    bm25=bm25,
+                    instructions=instructions,
+                    corpus_id=corpus_id,
+                    retrieve_k=retrieve_k,
+                    final_k=final_k,
+                    alpha=alpha,
+                )
 
-                # Persist outputs so they DO NOT disappear on reruns/scroll
+                # Persist outputs so they remain visible across reruns/scrolling
                 st.session_state["last_request_id"] = req_id
                 st.session_state["last_answer"] = answer
                 st.session_state["last_results"] = results
@@ -259,8 +229,8 @@ def main():
                 st.session_state["last_latency_ms"] = latency_ms
                 st.session_state["last_error"] = None
 
-                # IMPORTANT: Do NOT clear the query after Run RAG.
-                # The query should stay unless manually deleted or user clicks Clear.
+                # Keep draft aligned with committed query
+                st.session_state["query_draft"] = st.session_state["query"]
 
             except Exception as e:
                 log_exception(
@@ -268,12 +238,12 @@ def main():
                     stage="streamlit_run",
                     error=e,
                     meta={"corpus_id": corpus_id},
-                    request_id=request_id,
+                    request_id=request_id_for_error_log,
                 )
                 st.session_state["last_error"] = f"Error while running pipeline: {e}"
-                st.session_state["last_answer"] = None
+                # No collateral damage: keep previous answer/results intact
 
-    # ---------------- Render outputs (always visible if present) ----------------
+    # ---------------- Render outputs ----------------
     if st.session_state.get("last_error"):
         st.error(st.session_state["last_error"])
 
