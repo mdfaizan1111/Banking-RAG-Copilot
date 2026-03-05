@@ -26,7 +26,7 @@ def load_corpus_id(processed_dir: str = PROCESSED_DIR) -> str:
 
 @st.cache_resource
 def load_runtime():
-    """Load indexes + stores once per app session (cached across reruns)."""
+    """Load indexes + stores once per app session."""
     index, metadata, chunk_store = load_faiss_bundle(PROCESSED_DIR)
     bm25 = joblib.load(f"{PROCESSED_DIR}/bm25.joblib")
     instructions = build_answer_instructions()
@@ -43,10 +43,6 @@ def list_pdfs(raw_dir: str = RAW_DIR):
 
 def init_state():
     defaults = {
-        # committed query (what user last submitted / wants to keep)
-        "query": "",
-        # draft inside the form (buffer so typing doesn't rerun the whole page)
-        "query_draft": "",
         "last_request_id": None,
         "last_answer": None,
         "last_results": None,
@@ -177,29 +173,24 @@ def main():
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
     # ---------------- Main: Input + Run ----------------
-    st.subheader("Please ask your question here")
+    st.subheader("Please enter your question here")
 
-    # Draft buffer:
-    # - query_draft is what user types
-    # - query is "committed" only when user clicks Run RAG
-    # This avoids constant enable/disable flicker while typing.
+    # IMPORTANT:
+    # - No Clear button.
+    # - No manual st.session_state["query"]=... anywhere.
+    # - Form ensures query submit happens only on button click.
     with st.form("rag_form", clear_on_submit=False):
         st.text_input(
             "Query",
-            key="query_draft",
-            value=st.session_state.get("query") or "",
+            key="query",
             placeholder="e.g., What are the categories under PSL?",
         )
         run_btn = st.form_submit_button("Run RAG", type="primary")
 
     # ---------------- Run pipeline only when submitted ----------------
     if run_btn:
-        # Commit draft → query (so the field stays filled after submit)
-        st.session_state["query"] = (st.session_state.get("query_draft") or "").strip()
+        q = (st.session_state.get("query") or "").strip()
 
-        q = st.session_state["query"]
-
-        # Empty query: show error but DO NOT wipe previous answer/results
         if not q:
             st.session_state["last_error"] = "Please enter a query."
         else:
@@ -207,7 +198,7 @@ def main():
             request_id_for_error_log = str(uuid.uuid4())
 
             try:
-                # No spinner / no progress messages (silent run)
+                # Silent run: no spinner / no progress text
                 req_id, answer, results, candidates, latency_ms = run_pipeline(
                     q=q,
                     index=index,
@@ -221,7 +212,7 @@ def main():
                     alpha=alpha,
                 )
 
-                # Persist outputs so they remain visible across reruns/scrolling
+                # Persist outputs so they stay while user reads
                 st.session_state["last_request_id"] = req_id
                 st.session_state["last_answer"] = answer
                 st.session_state["last_results"] = results
@@ -229,8 +220,7 @@ def main():
                 st.session_state["last_latency_ms"] = latency_ms
                 st.session_state["last_error"] = None
 
-                # Keep draft aligned with committed query
-                st.session_state["query_draft"] = st.session_state["query"]
+                # Do NOT clear query: user wants it to remain unless manually edited
 
             except Exception as e:
                 log_exception(
@@ -241,7 +231,7 @@ def main():
                     request_id=request_id_for_error_log,
                 )
                 st.session_state["last_error"] = f"Error while running pipeline: {e}"
-                # No collateral damage: keep previous answer/results intact
+                # Keep old answer/results (no collateral damage)
 
     # ---------------- Render outputs ----------------
     if st.session_state.get("last_error"):
