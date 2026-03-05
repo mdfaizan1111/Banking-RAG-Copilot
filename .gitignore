@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
 # Virtual env
 .venv/
@@ -11,10 +12,14 @@ venv/
 .DS_Store
 .vscode/
 
-# Secrets (NEVER COMMIT)
+# Secrets
 .streamlit/secrets.toml
 .env
 
 # Logs (keep folder but ignore files)
 logs/*
 !logs/.gitkeep
+
+# Large artifacts (optional, if you don't want them committed)
+# data/processed/
+# data/raw/
