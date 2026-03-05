@@ -1,0 +1,15 @@
+streamlit==1.36.0
+openai>=1.40.0
+
+numpy
+pandas
+
+faiss-cpu
+joblib
+
+pypdf
+
+rank-bm25
+
+sentence-transformers
+torch

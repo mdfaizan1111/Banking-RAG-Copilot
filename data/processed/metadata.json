@@ -1,0 +1,2317 @@
+[
+  {
+    "faiss_id": 0,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_0",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 1,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_1",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 2,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_2",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 3,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_3",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 4,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_4",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 5,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_5",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 6,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_6",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 7,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_7",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 8,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_8",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 9,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_9",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 10,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_10",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 11,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_11",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 12,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_12",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 13,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_13",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 14,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_14",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 15,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_15",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 16,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_16",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 17,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_17",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 18,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_18",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 19,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_19",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 20,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_20",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 21,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_21",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 22,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_22",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 23,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_23",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 24,
+    "chunk_id": "rbi_debitcard_issuance.pdf::chunk_24",
+    "file_name": "rbi_debitcard_issuance.pdf"
+  },
+  {
+    "faiss_id": 25,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_0",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 26,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_1",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 27,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_2",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 28,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_3",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 29,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_4",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 30,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_5",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 31,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_6",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 32,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_7",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 33,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_8",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 34,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_9",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 35,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_10",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 36,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_11",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 37,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_12",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 38,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_13",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 39,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_14",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 40,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_15",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 41,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_16",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 42,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_17",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 43,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_18",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 44,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_19",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 45,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_20",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 46,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_21",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 47,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_22",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 48,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_23",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 49,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_24",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 50,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_25",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 51,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_26",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 52,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_27",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 53,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_28",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 54,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_29",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 55,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_30",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 56,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_31",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 57,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_32",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 58,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_33",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 59,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_34",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 60,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_35",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 61,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_36",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 62,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_37",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 63,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_38",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 64,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_39",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 65,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_40",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 66,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_41",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 67,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_42",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 68,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_43",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 69,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_44",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 70,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_45",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 71,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_46",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 72,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_47",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 73,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_48",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 74,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_49",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 75,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_50",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 76,
+    "chunk_id": "rbi_default_treatment.pdf::chunk_51",
+    "file_name": "rbi_default_treatment.pdf"
+  },
+  {
+    "faiss_id": 77,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_0",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 78,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_1",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 79,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_2",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 80,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_3",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 81,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_4",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 82,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_5",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 83,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_6",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 84,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_7",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 85,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_8",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 86,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_9",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 87,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_10",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 88,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_11",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 89,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_12",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 90,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_13",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 91,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_14",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 92,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_15",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 93,
+    "chunk_id": "rbi_digital_channels.pdf::chunk_16",
+    "file_name": "rbi_digital_channels.pdf"
+  },
+  {
+    "faiss_id": 94,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_0",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 95,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_1",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 96,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_2",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 97,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_3",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 98,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_4",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 99,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_5",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 100,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_6",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 101,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_7",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 102,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_8",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 103,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_9",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 104,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_10",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 105,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_11",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 106,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_12",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 107,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_13",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 108,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_14",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 109,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_15",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 110,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_16",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 111,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_17",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 112,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_18",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 113,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_19",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 114,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_20",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 115,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_21",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 116,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_22",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 117,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_23",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 118,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_24",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 119,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_25",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 120,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_26",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 121,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_27",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 122,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_28",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 123,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_29",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 124,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_30",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 125,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_31",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 126,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_32",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 127,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_33",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 128,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_34",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 129,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_35",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 130,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_36",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 131,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_37",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 132,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_38",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 133,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_39",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 134,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_40",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 135,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_41",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 136,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_42",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 137,
+    "chunk_id": "rbi_digital_lending.pdf::chunk_43",
+    "file_name": "rbi_digital_lending.pdf"
+  },
+  {
+    "faiss_id": 138,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_0",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 139,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_1",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 140,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_2",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 141,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_3",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 142,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_4",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 143,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_5",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 144,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_6",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 145,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_7",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 146,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_8",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 147,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_9",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 148,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_10",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 149,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_11",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 150,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_12",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 151,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_13",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 152,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_14",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 153,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_15",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 154,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_16",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 155,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_17",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 156,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_18",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 157,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_19",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 158,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_20",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 159,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_21",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 160,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_22",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 161,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_23",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 162,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_24",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 163,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_25",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 164,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_26",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 165,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_27",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 166,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_28",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 167,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_29",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 168,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_30",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 169,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_31",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 170,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_32",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 171,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_33",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 172,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_34",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 173,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_35",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 174,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_36",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 175,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_37",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 176,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_38",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 177,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_39",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 178,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_40",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 179,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_41",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 180,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_42",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 181,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_43",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 182,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_44",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 183,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_45",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 184,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_46",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 185,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_47",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 186,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_48",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 187,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_49",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 188,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_50",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 189,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_51",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 190,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_52",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 191,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_53",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 192,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_54",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 193,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_55",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 194,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_56",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 195,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_57",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 196,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_58",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 197,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_59",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 198,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_60",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 199,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_61",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 200,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_62",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 201,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_63",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 202,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_64",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 203,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_65",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 204,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_66",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 205,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_67",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 206,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_68",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 207,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_69",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 208,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_70",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 209,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_71",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 210,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_72",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 211,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_73",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 212,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_74",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 213,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_75",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 214,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_76",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 215,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_77",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 216,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_78",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 217,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_79",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 218,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_80",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 219,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_81",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 220,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_82",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 221,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_83",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 222,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_84",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 223,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_85",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 224,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_86",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 225,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_87",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 226,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_88",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 227,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_89",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 228,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_90",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 229,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_91",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 230,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_92",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 231,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_93",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 232,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_94",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 233,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_95",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 234,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_96",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 235,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_97",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 236,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_98",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 237,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_99",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 238,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_100",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 239,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_101",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 240,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_102",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 241,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_103",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 242,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_104",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 243,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_105",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 244,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_106",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 245,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_107",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 246,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_108",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 247,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_109",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 248,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_110",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 249,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_111",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 250,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_112",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 251,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_113",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 252,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_114",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 253,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_115",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 254,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_116",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 255,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_117",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 256,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_118",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 257,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_119",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 258,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_120",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 259,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_121",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 260,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_122",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 261,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_123",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 262,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_124",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 263,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_125",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 264,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_126",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 265,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_127",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 266,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_128",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 267,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_129",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 268,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_130",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 269,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_131",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 270,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_132",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 271,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_133",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 272,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_134",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 273,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_135",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 274,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_136",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 275,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_137",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 276,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_138",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 277,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_139",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 278,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_140",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 279,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_141",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 280,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_142",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 281,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_143",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 282,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_144",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 283,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_145",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 284,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_146",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 285,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_147",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 286,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_148",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 287,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_149",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 288,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_150",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 289,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_151",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 290,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_152",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 291,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_153",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 292,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_154",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 293,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_155",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 294,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_156",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 295,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_157",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 296,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_158",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 297,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_159",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 298,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_160",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 299,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_161",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 300,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_162",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 301,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_163",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 302,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_164",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 303,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_165",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 304,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_166",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 305,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_167",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 306,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_168",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 307,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_169",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 308,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_170",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 309,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_171",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 310,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_172",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 311,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_173",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 312,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_174",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 313,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_175",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 314,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_176",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 315,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_177",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 316,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_178",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 317,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_179",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 318,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_180",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 319,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_181",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 320,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_182",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 321,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_183",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 322,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_184",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 323,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_185",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 324,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_186",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 325,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_187",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 326,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_188",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 327,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_189",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 328,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_190",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 329,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_191",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 330,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_192",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 331,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_193",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 332,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_194",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 333,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_195",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 334,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_196",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 335,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_197",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 336,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_198",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 337,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_199",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 338,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_200",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 339,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_201",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 340,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_202",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 341,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_203",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 342,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_204",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 343,
+    "chunk_id": "rbi_kyc_directions.pdf::chunk_205",
+    "file_name": "rbi_kyc_directions.pdf"
+  },
+  {
+    "faiss_id": 344,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_0",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 345,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_1",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 346,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_2",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 347,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_3",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 348,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_4",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 349,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_5",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 350,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_6",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 351,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_7",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 352,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_8",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 353,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_9",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 354,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_10",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 355,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_11",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 356,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_12",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 357,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_13",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 358,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_14",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 359,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_15",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 360,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_16",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 361,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_17",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 362,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_18",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 363,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_19",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 364,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_20",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 365,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_21",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 366,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_22",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 367,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_23",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 368,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_24",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 369,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_25",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 370,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_26",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 371,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_27",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 372,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_28",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 373,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_29",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 374,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_30",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 375,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_31",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 376,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_32",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 377,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_33",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 378,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_34",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 379,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_35",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 380,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_36",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 381,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_37",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 382,
+    "chunk_id": "rbi_p2p_lending.pdf::chunk_38",
+    "file_name": "rbi_p2p_lending.pdf"
+  },
+  {
+    "faiss_id": 383,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_0",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 384,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_1",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 385,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_2",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 386,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_3",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 387,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_4",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 388,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_5",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 389,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_6",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 390,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_7",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 391,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_8",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 392,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_9",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 393,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_10",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 394,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_11",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 395,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_12",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 396,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_13",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 397,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_14",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 398,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_15",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 399,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_16",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 400,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_17",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 401,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_18",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 402,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_19",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 403,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_20",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 404,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_21",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 405,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_22",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 406,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_23",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 407,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_24",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 408,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_25",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 409,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_26",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 410,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_27",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 411,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_28",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 412,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_29",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 413,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_30",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 414,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_31",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 415,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_32",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 416,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_33",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 417,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_34",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 418,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_35",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 419,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_36",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 420,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_37",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 421,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_38",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 422,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_39",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 423,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_40",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 424,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_41",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 425,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_42",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 426,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_43",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 427,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_44",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 428,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_45",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 429,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_46",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 430,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_47",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 431,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_48",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 432,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_49",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 433,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_50",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 434,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_51",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 435,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_52",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 436,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_53",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 437,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_54",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 438,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_55",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 439,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_56",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 440,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_57",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 441,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_58",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 442,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_59",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 443,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_60",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 444,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_61",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 445,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_62",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 446,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_63",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 447,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_64",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 448,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_65",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 449,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_66",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 450,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_67",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 451,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_68",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 452,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_69",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 453,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_70",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 454,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_71",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 455,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_72",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 456,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_73",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 457,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_74",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 458,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_75",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 459,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_76",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 460,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_77",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 461,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_78",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  },
+  {
+    "faiss_id": 462,
+    "chunk_id": "rbi_prioritysector_lending.pdf::chunk_79",
+    "file_name": "rbi_prioritysector_lending.pdf"
+  }
+]
