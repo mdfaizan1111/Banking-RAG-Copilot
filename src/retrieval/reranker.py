@@ -1,10 +1,15 @@
 # src/retrieval/reranker.py
 from __future__ import annotations
 from typing import List, Dict, Any
+
+import streamlit as st
 from sentence_transformers import CrossEncoder
 
-# Small, common cross-encoder. Good tradeoff for demos.
-_RERANKER = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+@st.cache_resource(show_spinner=False)
+def get_reranker() -> CrossEncoder:
+    # Lazy-load once per app session
+    return CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
 
 
 def rerank(
@@ -16,6 +21,7 @@ def rerank(
 ) -> List[Dict[str, Any]]:
     pairs = []
     kept = []
+
     for r in results:
         cid = r["chunk_id"]
         txt = chunk_store.get(cid, "")
@@ -27,7 +33,9 @@ def rerank(
     if not pairs:
         return []
 
-    scores = _RERANKER.predict(pairs)
+    reranker = get_reranker()
+    scores = reranker.predict(pairs)
+
     for r, s in zip(kept, scores):
         r["rerank_score"] = float(s)
 
