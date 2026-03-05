@@ -12,4 +12,4 @@ pypdf
 rank-bm25
 
 sentence-transformers
-torch
+torch==2.3.1
