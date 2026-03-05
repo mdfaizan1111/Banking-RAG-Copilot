@@ -27,8 +27,12 @@ def load_corpus_id(processed_dir: str = PROCESSED_DIR) -> str:
 
 @st.cache_resource
 def load_runtime():
+    """
+    Load indexes + stores once per app session.
+    This is the biggest speed win for Streamlit deployments.
+    """
     index, metadata, chunk_store = load_faiss_bundle(PROCESSED_DIR)
-    bm25 = joblib.load(f"{PROCESSED_DIR}/bm25.joblib")
+    bm25 = joblib.load(str(Path(PROCESSED_DIR) / "bm25.joblib"))
     instructions = build_answer_instructions()
     corpus_id = load_corpus_id(PROCESSED_DIR)
     return index, metadata, chunk_store, bm25, instructions, corpus_id
@@ -41,11 +45,6 @@ def list_pdfs(raw_dir: str = RAW_DIR):
     return sorted([x for x in p.glob("*.pdf")])
 
 
-def clear_query():
-    # Clear ONLY the query box safely (do NOT clear whole session_state)
-    st.session_state["query_input"] = ""
-
-
 def main():
     st.set_page_config(page_title="Banking RAG Copilot", layout="wide")
 
@@ -54,7 +53,9 @@ def main():
         "Hybrid Retrieval (FAISS + BM25) → Cross-Encoder Rerank → Grounded Answer + Citations + Latency + Audit Logs"
     )
 
-    # Load key from Streamlit secrets if present
+    # ---- API key check (Streamlit secrets first, else env var) ----
+    # Your generator expects OPENAI_API_KEY from environment,
+    # so we set it from Streamlit secrets if present.
     if "OPENAI_API_KEY" in st.secrets and not os.getenv("OPENAI_API_KEY"):
         os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
@@ -62,14 +63,14 @@ def main():
         st.warning("OPENAI_API_KEY is not set. Add it in .streamlit/secrets.toml or environment variables.")
         st.stop()
 
-    # Load runtime objects (cached)
+    # ---- Load runtime objects (cached) ----
     try:
         index, metadata, chunk_store, bm25, instructions, corpus_id = load_runtime()
     except Exception as e:
         st.error(f"Could not load processed artifacts. Did you run build_corpus? Error: {e}")
         st.stop()
 
-    # Sidebar
+    # ---- Sidebar: corpus + PDF download ----
     st.sidebar.header("📚 Corpus")
     st.sidebar.write(f"**Corpus ID:** `{corpus_id}`")
 
@@ -94,6 +95,7 @@ def main():
         except Exception as e:
             st.sidebar.error(f"Could not read PDF: {e}")
 
+    # ---- Sidebar: retrieval controls ----
     st.sidebar.header("⚙️ Retrieval Settings")
     retrieve_k = st.sidebar.slider("Retrieve K (candidates before rerank)", 5, 50, 15, step=1)
     final_k = st.sidebar.slider("Final K (chunks sent to LLM)", 1, 10, 3, step=1)
@@ -102,53 +104,44 @@ def main():
     show_debug = st.sidebar.checkbox("Show debug panels", value=True)
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
-    # Main
+    # ---- Main: query input (2 lines, no 'press enter to apply') ----
+    st.subheader("Ask a compliance question")
 
-st.subheader("Ask a compliance question")
+    # Persist query so Clear can safely reset it
+    if "query" not in st.session_state:
+        st.session_state["query"] = ""
 
-# Keep the query in session_state (so Clear works safely)
-if "query" not in st.session_state:
-    st.session_state["query"] = ""
+    query = st.text_area(
+        "Query",
+        key="query",
+        height=70,  # ~2 lines
+        placeholder="e.g., What are the categories under PSL?",
+        label_visibility="visible",
+    )
 
-# 2-line-ish input (height ~70px)
-query = st.text_area(
-    "Query",
-    key="query",
-    height=70,  # <= this makes it small (about 2 lines)
-    placeholder="e.g., What are the categories under PSL?"
-)
+    def safe_clear():
+        # IMPORTANT: do NOT use st.session_state.clear()
+        # It can wipe Streamlit internal keys and throw errors.
+        st.session_state["query"] = ""
 
-def safe_clear():
-    # Reset ONLY our app keys; do NOT clear the whole session_state
-    st.session_state["query"] = ""
-    # Optional: clear anything else you store
-    for k in ["last_answer", "last_results", "last_candidates", "last_request_id"]:
-        if k in st.session_state:
-            del st.session_state[k]
-    st.rerun()
+        # Optional: clear any stored outputs if you ever add them
+        for k in ["last_answer", "last_results", "last_candidates", "last_request_id"]:
+            if k in st.session_state:
+                del st.session_state[k]
 
-colA, colB = st.columns([1, 1])
-with colA:
-    run_btn = st.button("Run RAG", type="primary")
-with colB:
-    st.button("Clear", on_click=safe_clear)
-
-    
-            
-
-        
-
-    # Handle Clear (safe + immediate)
-    if clear_btn:
-        clear_query()
         st.rerun()
 
-    # Only run pipeline when Run RAG is clicked
+    colA, colB = st.columns([1, 1])
+    with colA:
+        run_btn = st.button("Run RAG", type="primary")
+    with colB:
+        st.button("Clear", on_click=safe_clear)
+
+    # Only run pipeline when user explicitly clicks Run RAG
     if not run_btn:
         st.stop()
 
-    query = (st.session_state.get("query_input") or "").strip()
-    if not query:
+    if not query.strip():
         st.error("Please enter a query.")
         st.stop()
 
@@ -156,6 +149,7 @@ with colB:
     timers = Timers()
 
     try:
+        # 1) Hybrid retrieve
         with timers.span("hybrid_ms"):
             candidates = hybrid_search(
                 query=query,
@@ -167,6 +161,7 @@ with colB:
                 timers=timers,
             )
 
+        # 2) Rerank
         with timers.span("rerank_ms"):
             results = rerank(
                 query=query,
@@ -175,17 +170,20 @@ with colB:
                 top_k=final_k,
             )
 
+        # 3) Build context
         with timers.span("context_ms"):
             context = build_prompt_context(results, chunk_store)
 
+        # 4) Generate answer
         with timers.span("llm_ms"):
             answer = generate_answer(query, instructions, context)
 
+        # 5) Audit trail
         log_audit_event(
             query=query,
             answer=answer,
-            results=candidates,
-            context_results=results,
+            results=candidates,          # retrieval transparency
+            context_results=results,     # what went into LLM
             latency_ms=timers.ms,
             meta={
                 "mode": "hybrid_rerank",
@@ -208,12 +206,14 @@ with colB:
         st.error(f"Error while running pipeline: {e}")
         st.stop()
 
+    # ---- Output ----
     st.success("Done")
     st.write(f"**Request ID:** `{request_id}`")
 
     st.markdown("### ✅ Answer")
     st.write(answer)
 
+    # ---- Evidence / debug panels ----
     if show_debug:
         st.markdown("### 🔎 Evidence (context chunks sent to LLM)")
         for r in results:
