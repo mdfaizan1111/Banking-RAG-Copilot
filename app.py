@@ -111,22 +111,7 @@ def main():
         placeholder="e.g., What are the categories under PSL?",
     )
 
-    colA, colB = st.columns([1, 1])
-
-    with colA:
-        run_btn = st.button("Run RAG", type="primary")
-
-    with colB:
-        clear_btn = st.button("Clear")
-
-    # Clear safely (NO st.rerun in callback)
-    if clear_btn:
-        st.session_state["query"] = ""
-        # Optional: clear any previous outputs if you store them later
-        for k in ["last_answer", "last_results", "last_candidates", "last_request_id"]:
-            if k in st.session_state:
-                del st.session_state[k]
-        st.stop()
+    run_btn = st.button("Run RAG", type="primary")
 
     # Only run when user clicks Run RAG
     if not run_btn:
