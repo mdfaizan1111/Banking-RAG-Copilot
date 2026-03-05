@@ -27,10 +27,7 @@ def load_corpus_id(processed_dir: str = PROCESSED_DIR) -> str:
 
 @st.cache_resource
 def load_runtime():
-    """
-    Load indexes + stores once per app session.
-    This is the biggest speed win for Streamlit deployments.
-    """
+    """Load indexes + stores once per app session."""
     index, metadata, chunk_store = load_faiss_bundle(PROCESSED_DIR)
     bm25 = joblib.load(str(Path(PROCESSED_DIR) / "bm25.joblib"))
     instructions = build_answer_instructions()
@@ -54,8 +51,6 @@ def main():
     )
 
     # ---- API key check (Streamlit secrets first, else env var) ----
-    # Your generator expects OPENAI_API_KEY from environment,
-    # so we set it from Streamlit secrets if present.
     if "OPENAI_API_KEY" in st.secrets and not os.getenv("OPENAI_API_KEY"):
         os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
@@ -104,40 +99,36 @@ def main():
     show_debug = st.sidebar.checkbox("Show debug panels", value=True)
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
-    # ---- Main: query input (2 lines, no 'press enter to apply') ----
-    st.subheader("Ask a compliance question")
+    # ---- Main: query input (NO Ctrl+Enter hint) ----
+    st.subheader("Please ask your question here")
 
-    # Persist query so Clear can safely reset it
     if "query" not in st.session_state:
         st.session_state["query"] = ""
 
-    query = st.text_area(
+    query = st.text_input(
         "Query",
         key="query",
-        height=70,  # ~2 lines
         placeholder="e.g., What are the categories under PSL?",
-        label_visibility="visible",
     )
 
-    def safe_clear():
-        # IMPORTANT: do NOT use st.session_state.clear()
-        # It can wipe Streamlit internal keys and throw errors.
-        st.session_state["query"] = ""
+    colA, colB = st.columns([1, 1])
 
-        # Optional: clear any stored outputs if you ever add them
+    with colA:
+        run_btn = st.button("Run RAG", type="primary")
+
+    with colB:
+        clear_btn = st.button("Clear")
+
+    # Clear safely (NO st.rerun in callback)
+    if clear_btn:
+        st.session_state["query"] = ""
+        # Optional: clear any previous outputs if you store them later
         for k in ["last_answer", "last_results", "last_candidates", "last_request_id"]:
             if k in st.session_state:
                 del st.session_state[k]
+        st.stop()
 
-        st.rerun()
-
-    colA, colB = st.columns([1, 1])
-    with colA:
-        run_btn = st.button("Run RAG", type="primary")
-    with colB:
-        st.button("Clear", on_click=safe_clear)
-
-    # Only run pipeline when user explicitly clicks Run RAG
+    # Only run when user clicks Run RAG
     if not run_btn:
         st.stop()
 
@@ -182,8 +173,8 @@ def main():
         log_audit_event(
             query=query,
             answer=answer,
-            results=candidates,          # retrieval transparency
-            context_results=results,     # what went into LLM
+            results=candidates,
+            context_results=results,
             latency_ms=timers.ms,
             meta={
                 "mode": "hybrid_rerank",
@@ -213,7 +204,6 @@ def main():
     st.markdown("### ✅ Answer")
     st.write(answer)
 
-    # ---- Evidence / debug panels ----
     if show_debug:
         st.markdown("### 🔎 Evidence (context chunks sent to LLM)")
         for r in results:
@@ -239,3 +229,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
