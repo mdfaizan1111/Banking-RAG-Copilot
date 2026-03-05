@@ -1,15 +1,20 @@
-streamlit==1.36.0
-openai>=1.40.0
+
 
 numpy
 pandas
 
+
+streamlit==1.36.0
+openai>=1.0.0
 faiss-cpu
 joblib
-
+rank-bm25
 pypdf
 
-rank-bm25
-
-sentence-transformers
+# Force CPU PyTorch (prevents CUDA junk + improves stability on Streamlit Cloud)
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.3.1
+
+# IMPORTANT: pin transformers < 5 to avoid the nn NameError crash
+transformers==4.46.3
+sentence-transformers==5.2.3
