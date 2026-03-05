@@ -103,24 +103,40 @@ def main():
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
     # Main
-    st.subheader("Ask a compliance question")
 
-    # IMPORTANT: Use a form to:
-    # 1) remove "Press Enter to apply"
-    # 2) prevent reruns while typing
-    with st.form("query_form", clear_on_submit=False):
-        st.text_area(
-            "Query",
-            placeholder="e.g., What are the categories under PSL?",
-            height=55,
-            key="query_input",
-        )
+st.subheader("Ask a compliance question")
 
-        colA, colB = st.columns([1, 1])
-        with colA:
-            run_btn = st.form_submit_button("Run RAG", type="primary")
-        with colB:
-            clear_btn = st.form_submit_button("Clear")
+# Keep the query in session_state (so Clear works safely)
+if "query" not in st.session_state:
+    st.session_state["query"] = ""
+
+# 2-line-ish input (height ~70px)
+query = st.text_area(
+    "Query",
+    key="query",
+    height=70,  # <= this makes it small (about 2 lines)
+    placeholder="e.g., What are the categories under PSL?"
+)
+
+def safe_clear():
+    # Reset ONLY our app keys; do NOT clear the whole session_state
+    st.session_state["query"] = ""
+    # Optional: clear anything else you store
+    for k in ["last_answer", "last_results", "last_candidates", "last_request_id"]:
+        if k in st.session_state:
+            del st.session_state[k]
+    st.rerun()
+
+colA, colB = st.columns([1, 1])
+with colA:
+    run_btn = st.button("Run RAG", type="primary")
+with colB:
+    st.button("Clear", on_click=safe_clear)
+
+    
+            
+
+        
 
     # Handle Clear (safe + immediate)
     if clear_btn:
