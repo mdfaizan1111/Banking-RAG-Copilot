@@ -57,6 +57,7 @@ def init_state():
 
 
 def clear_state():
+    # Clear query + outputs; no explicit st.rerun() needed (Streamlit reruns automatically on click)
     st.session_state["query"] = ""
     st.session_state["last_request_id"] = None
     st.session_state["last_answer"] = None
@@ -66,9 +67,86 @@ def clear_state():
     st.session_state["last_error"] = None
 
 
+def run_pipeline(
+    *,
+    q: str,
+    index,
+    metadata,
+    chunk_store,
+    bm25,
+    instructions,
+    corpus_id: str,
+    retrieve_k: int,
+    final_k: int,
+    alpha: float,
+):
+    request_id = str(uuid.uuid4())
+    timers = Timers()
+
+    with timers.span("hybrid_ms"):
+        candidates = hybrid_search(
+            query=q,
+            index=index,
+            metadata=metadata,
+            bm25=bm25,
+            top_k=retrieve_k,
+            alpha=alpha,
+            timers=timers,
+        )
+
+    with timers.span("rerank_ms"):
+        results = rerank(
+            query=q,
+            results=candidates,
+            chunk_store=chunk_store,
+            top_k=final_k,
+        )
+
+    with timers.span("context_ms"):
+        context = build_prompt_context(results, chunk_store)
+
+    with timers.span("llm_ms"):
+        answer = generate_answer(q, instructions, context)
+
+    log_audit_event(
+        query=q,
+        answer=answer,
+        results=candidates,
+        context_results=results,
+        latency_ms=timers.ms,
+        meta={
+            "mode": "hybrid_rerank",
+            "retrieve_k": retrieve_k,
+            "final_k": final_k,
+            "alpha": alpha,
+            "corpus_id": corpus_id,
+        },
+        request_id=request_id,
+    )
+
+    return request_id, answer, results, candidates, dict(timers.ms)
+
+
 def main():
     st.set_page_config(page_title="Banking RAG Copilot", layout="wide")
     init_state()
+
+    # --- Small CSS fixes:
+    # 1) Keep query box compact
+    # 2) Hide the "Press Ctrl+Enter to apply" helper text (Streamlit may change DOM; if it stops working, remove safely)
+    st.markdown(
+        """
+        <style>
+          /* Make textarea shorter (approx 2 lines) */
+          [data-testid="stTextArea"] textarea { min-height: 72px; }
+
+          /* Try to hide the helper hint under textarea */
+          [data-testid="stTextArea"] div[data-testid="stWidgetLabel"] + div small { display: none !important; }
+          [data-testid="stTextArea"] small { display: none !important; }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.title("🏦 Banking RAG Copilot (Enterprise-style)")
     st.caption(
@@ -126,100 +204,74 @@ def main():
     # ---------------- Main: Controls ----------------
     st.subheader("Please ask your question here")
 
-    # Clear button (safe): top-level, no callback
-    col1, col2 = st.columns([1, 1])
-    with col1:
-        pass
-    with col2:
-        if st.button("Clear", use_container_width=True):
-            clear_state()
-            st.rerun()
-
-    # Use a form so typing doesn't trigger reruns + no "press enter/ctrl+enter" UI hints
+    # Use a form so typing does NOT trigger pipeline runs (and avoids UI instability).
+    # NOTE: Streamlit still reruns on typing, but ONLY to update session_state; the expensive pipeline will not run.
     with st.form("rag_form", clear_on_submit=False):
-        st.text_input(
+        st.text_area(
             "Query",
             key="query",
             placeholder="e.g., What are the categories under PSL?",
+            height=72,
         )
         run_btn = st.form_submit_button("Run RAG", type="primary")
+
+    # Clear button must be BELOW the query box (and not inside the form)
+    c1, c2, c3 = st.columns([3, 1.2, 1.2])
+    with c1:
+        pass
+    with c2:
+        # Keep empty / spacer
+        pass
+    with c3:
+        st.button("Clear", use_container_width=True, on_click=clear_state)
 
     # ---------------- Run pipeline only when submitted ----------------
     if run_btn:
         q = (st.session_state.get("query") or "").strip()
+
         if not q:
             st.session_state["last_error"] = "Please enter a query."
             st.session_state["last_answer"] = None
-            st.rerun()
-
-        request_id = str(uuid.uuid4())
-        timers = Timers()
-
-        try:
-            with timers.span("hybrid_ms"):
-                candidates = hybrid_search(
-                    query=q,
-                    index=index,
-                    metadata=metadata,
-                    bm25=bm25,
-                    top_k=retrieve_k,
-                    alpha=alpha,
-                    timers=timers,
-                )
-
-            with timers.span("rerank_ms"):
-                results = rerank(
-                    query=q,
-                    results=candidates,
-                    chunk_store=chunk_store,
-                    top_k=final_k,
-                )
-
-            with timers.span("context_ms"):
-                context = build_prompt_context(results, chunk_store)
-
-            with timers.span("llm_ms"):
-                answer = generate_answer(q, instructions, context)
-
-            log_audit_event(
-                query=q,
-                answer=answer,
-                results=candidates,
-                context_results=results,
-                latency_ms=timers.ms,
-                meta={
-                    "mode": "hybrid_rerank",
-                    "retrieve_k": retrieve_k,
-                    "final_k": final_k,
-                    "alpha": alpha,
-                    "corpus_id": corpus_id,
-                },
-                request_id=request_id,
-            )
-
-            # Persist outputs so they don't disappear on reruns
-            st.session_state["last_request_id"] = request_id
-            st.session_state["last_answer"] = answer
-            st.session_state["last_results"] = results
-            st.session_state["last_candidates"] = candidates
-            st.session_state["last_latency_ms"] = dict(timers.ms)
+        else:
             st.session_state["last_error"] = None
+            request_id = str(uuid.uuid4())
 
-            # OPTIONAL: clear query after successful run
-            # st.session_state["query"] = ""
+            try:
+                with st.spinner("Running retrieval → rerank → generation..."):
+                    req_id, answer, results, candidates, latency_ms = run_pipeline(
+                        q=q,
+                        index=index,
+                        metadata=metadata,
+                        chunk_store=chunk_store,
+                        bm25=bm25,
+                        instructions=instructions,
+                        corpus_id=corpus_id,
+                        retrieve_k=retrieve_k,
+                        final_k=final_k,
+                        alpha=alpha,
+                    )
 
-        except Exception as e:
-            log_exception(
-                query=q,
-                stage="streamlit_run",
-                error=e,
-                meta={"corpus_id": corpus_id},
-                request_id=request_id,
-            )
-            st.session_state["last_error"] = f"Error while running pipeline: {e}"
-            st.session_state["last_answer"] = None
+                # Persist outputs so they DO NOT disappear on reruns/scroll
+                st.session_state["last_request_id"] = req_id
+                st.session_state["last_answer"] = answer
+                st.session_state["last_results"] = results
+                st.session_state["last_candidates"] = candidates
+                st.session_state["last_latency_ms"] = latency_ms
+                st.session_state["last_error"] = None
 
-        st.rerun()
+                # IMPORTANT: Do NOT clear the query after Run RAG.
+                # The query should stay unless manually deleted or user clicks Clear.
+
+            except Exception as e:
+                log_exception(
+                    query=q,
+                    stage="streamlit_run",
+                    error=e,
+                    meta={"corpus_id": corpus_id},
+                    request_id=request_id,
+                )
+                st.session_state["last_error"] = f"Error while running pipeline: {e}"
+                st.session_state["last_answer"] = None
 
     # ---------------- Render outputs (always visible if present) ----------------
     if st.session_state.get("last_error"):
