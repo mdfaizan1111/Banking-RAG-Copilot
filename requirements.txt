@@ -1,20 +1,21 @@
-
-
-numpy
-pandas
-
-
+# --- Core ---
 streamlit==1.36.0
 openai>=1.0.0
-faiss-cpu
+
+# --- Data / utils ---
+numpy<2
+pandas
 joblib
 rank-bm25
 pypdf
 
-# Force CPU PyTorch (prevents CUDA junk + improves stability on Streamlit Cloud)
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.3.1
+# --- Retrieval ---
+faiss-cpu
 
-# IMPORTANT: pin transformers < 5 to avoid the nn NameError crash
+# --- ML stack (CPU only) ---
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.3.1+cpu
+
+# --- Transformers ecosystem (stable combo) ---
 transformers==4.46.3
-sentence-transformers==5.2.3
+sentence-transformers==2.7.0
