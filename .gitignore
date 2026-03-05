@@ -1,48 +1,20 @@
-# -----------------------------
-# Python / Virtual env
-# -----------------------------
-.venv/
-venv/
+# Python
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# -----------------------------
+# Virtual env
+.venv/
+venv/
+
 # OS / IDE
-# -----------------------------
 .DS_Store
-Thumbs.db
 .vscode/
 
-# -----------------------------
-# Secrets (never commit)
-# -----------------------------
+# Secrets (NEVER COMMIT)
 .streamlit/secrets.toml
 .env
-*.key
-*.pem
 
-# -----------------------------
 # Logs (keep folder but ignore files)
-# -----------------------------
 logs/*
 !logs/.gitkeep
-
-# -----------------------------
-# Data policy
-# -----------------------------
-# Keep RAW PDFs in repo ONLY if you want interviewer to download them.
-# If YES -> DO NOT ignore data/raw.
-# If NO  -> uncomment next line.
-# data/raw/
-
-# Keep processed for fast startup (recommended for demo)
-# If you want smaller repo later, uncomment:
-# data/processed/
-
-# -----------------------------
-# Streamlit / misc caches
-# -----------------------------
-.streamlit/cache/
-.cache/
