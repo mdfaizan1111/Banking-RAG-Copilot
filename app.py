@@ -34,21 +34,30 @@ def load_runtime():
     return index, metadata, chunk_store, bm25, instructions, corpus_id
 
 
-def list_pdfs(raw_dir: str = RAW_DIR):
+@st.cache_data(show_spinner=False)
+def cached_pdf_names(raw_dir: str = RAW_DIR):
     p = Path(raw_dir)
     if not p.exists():
         return []
-    return sorted([x for x in p.glob("*.pdf")])
+    return [x.name for x in sorted(p.glob("*.pdf"))]
+
+
+@st.cache_data(show_spinner=False)
+def cached_pdf_bytes(raw_dir: str, filename: str) -> bytes:
+    return (Path(raw_dir) / filename).read_bytes()
 
 
 def init_state():
     defaults = {
+        "query": "",
         "last_request_id": None,
+        "last_query": None,
         "last_answer": None,
         "last_results": None,
         "last_candidates": None,
         "last_latency_ms": None,
         "last_error": None,
+        "is_running": False,
     }
     for k, v in defaults.items():
         if k not in st.session_state:
@@ -124,7 +133,7 @@ def main():
         "Hybrid Retrieval (FAISS + BM25) → Cross-Encoder Rerank → Grounded Answer + Citations + Latency + Audit Logs"
     )
 
-    # Load key from Streamlit secrets if present
+    # Key from secrets/env
     if "OPENAI_API_KEY" in st.secrets and not os.getenv("OPENAI_API_KEY"):
         os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
@@ -132,7 +141,7 @@ def main():
         st.warning("OPENAI_API_KEY is not set. Add it in .streamlit/secrets.toml or environment variables.")
         st.stop()
 
-    # Load runtime objects (cached)
+    # Load runtime (cached)
     try:
         index, metadata, chunk_store, bm25, instructions, corpus_id = load_runtime()
     except Exception as e:
@@ -143,27 +152,6 @@ def main():
     st.sidebar.header("📚 Corpus")
     st.sidebar.write(f"**Corpus ID:** `{corpus_id}`")
 
-    pdfs = list_pdfs(RAW_DIR)
-    if not pdfs:
-        st.sidebar.error("No PDFs found in data/raw. Add PDFs and rebuild corpus.")
-    else:
-        selected_pdf = st.sidebar.selectbox(
-            "Select a PDF to download/inspect",
-            options=[p.name for p in pdfs],
-            index=0,
-        )
-        sel_path = Path(RAW_DIR) / selected_pdf
-        try:
-            data = sel_path.read_bytes()
-            st.sidebar.download_button(
-                "⬇️ Download selected PDF",
-                data=data,
-                file_name=selected_pdf,
-                mime="application/pdf",
-            )
-        except Exception as e:
-            st.sidebar.error(f"Could not read PDF: {e}")
-
     st.sidebar.header("⚙️ Retrieval Settings")
     retrieve_k = st.sidebar.slider("Retrieve K (candidates before rerank)", 5, 50, 15, step=1)
     final_k = st.sidebar.slider("Final K (chunks sent to LLM)", 1, 10, 3, step=1)
@@ -172,33 +160,53 @@ def main():
     show_debug = st.sidebar.checkbox("Show debug panels", value=True)
     show_latency = st.sidebar.checkbox("Show latency", value=True)
 
-    # ---------------- Main: Input + Run ----------------
+    # OPTIONAL PDF tools moved behind expander so they don't slow every rerun
+    with st.sidebar.expander("📄 PDF download (optional)", expanded=False):
+        pdf_names = cached_pdf_names(RAW_DIR)
+        if not pdf_names:
+            st.error("No PDFs found in data/raw. Add PDFs and rebuild corpus.")
+        else:
+            selected_pdf = st.selectbox("Select a PDF", options=pdf_names, index=0)
+            try:
+                data = cached_pdf_bytes(RAW_DIR, selected_pdf)
+                st.download_button(
+                    "⬇️ Download selected PDF",
+                    data=data,
+                    file_name=selected_pdf,
+                    mime="application/pdf",
+                )
+            except Exception as e:
+                st.error(f"Could not read PDF: {e}")
+
+    # ---------------- Main ----------------
     st.subheader("Please enter your question here")
 
-    # IMPORTANT:
-    # - No Clear button.
-    # - No manual st.session_state["query"]=... anywhere.
-    # - Form ensures query submit happens only on button click.
+    # NOTE: typing will still rerun, but now reruns are cheap, so flicker reduces drastically.
     with st.form("rag_form", clear_on_submit=False):
         st.text_input(
             "Query",
             key="query",
             placeholder="e.g., What are the categories under PSL?",
+            disabled=st.session_state.get("is_running", False),
         )
-        run_btn = st.form_submit_button("Run RAG", type="primary")
+        run_btn = st.form_submit_button("Run RAG", type="primary", disabled=st.session_state.get("is_running", False))
 
-    # ---------------- Run pipeline only when submitted ----------------
     if run_btn:
         q = (st.session_state.get("query") or "").strip()
 
         if not q:
             st.session_state["last_error"] = "Please enter a query."
         else:
+            # Mark running + clear old answer immediately (prevents “old answer still shown”)
+            st.session_state["is_running"] = True
             st.session_state["last_error"] = None
-            request_id_for_error_log = str(uuid.uuid4())
+            st.session_state["last_answer"] = None
+            st.session_state["last_results"] = None
+            st.session_state["last_candidates"] = None
+            st.session_state["last_latency_ms"] = None
+            st.session_state["last_query"] = q
 
             try:
-                # Silent run: no spinner / no progress text
                 req_id, answer, results, candidates, latency_ms = run_pipeline(
                     q=q,
                     index=index,
@@ -212,7 +220,6 @@ def main():
                     alpha=alpha,
                 )
 
-                # Persist outputs so they stay while user reads
                 st.session_state["last_request_id"] = req_id
                 st.session_state["last_answer"] = answer
                 st.session_state["last_results"] = results
@@ -220,26 +227,27 @@ def main():
                 st.session_state["last_latency_ms"] = latency_ms
                 st.session_state["last_error"] = None
 
-                # Do NOT clear query: user wants it to remain unless manually edited
-
             except Exception as e:
                 log_exception(
                     query=q,
                     stage="streamlit_run",
                     error=e,
                     meta={"corpus_id": corpus_id},
-                    request_id=request_id_for_error_log,
+                    request_id=str(uuid.uuid4()),
                 )
                 st.session_state["last_error"] = f"Error while running pipeline: {e}"
-                # Keep old answer/results (no collateral damage)
 
-    # ---------------- Render outputs ----------------
+            finally:
+                st.session_state["is_running"] = False
+
+    # ---------------- Output ----------------
     if st.session_state.get("last_error"):
         st.error(st.session_state["last_error"])
 
     if st.session_state.get("last_answer"):
         st.success("Done")
         st.write(f"**Request ID:** `{st.session_state['last_request_id']}`")
+        st.write(f"**Query:** {st.session_state.get('last_query','')}")
 
         st.markdown("### ✅ Answer")
         st.write(st.session_state["last_answer"])
@@ -269,8 +277,6 @@ def main():
             st.markdown("#### Hybrid breakdown")
             hybrid_keys = ["embed_ms", "faiss_ms", "bm25_ms", "merge_ms"]
             st.write({k: round(latency_ms[k], 3) for k in hybrid_keys if k in latency_ms})
-
-        st.caption("Audit logs: logs/query_audit.jsonl | Errors: logs/errors.jsonl")
 
 
 if __name__ == "__main__":
