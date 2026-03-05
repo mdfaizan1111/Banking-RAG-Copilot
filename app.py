@@ -41,11 +41,18 @@ def list_pdfs(raw_dir: str = RAW_DIR):
     return sorted([x for x in p.glob("*.pdf")])
 
 
+def clear_query():
+    # Clear ONLY the query box safely (do NOT clear whole session_state)
+    st.session_state["query_input"] = ""
+
+
 def main():
     st.set_page_config(page_title="Banking RAG Copilot", layout="wide")
 
     st.title("🏦 Banking RAG Copilot (Enterprise-style)")
-    st.caption("Hybrid Retrieval (FAISS + BM25) → Cross-Encoder Rerank → Grounded Answer + Citations + Latency + Audit Logs")
+    st.caption(
+        "Hybrid Retrieval (FAISS + BM25) → Cross-Encoder Rerank → Grounded Answer + Citations + Latency + Audit Logs"
+    )
 
     # Load key from Streamlit secrets if present
     if "OPENAI_API_KEY" in st.secrets and not os.getenv("OPENAI_API_KEY"):
@@ -97,18 +104,35 @@ def main():
 
     # Main
     st.subheader("Ask a compliance question")
-    query = st.text_input("Query", placeholder="e.g., What are the categories under PSL?")
 
-    colA, colB = st.columns([1, 1])
-    with colA:
-        run_btn = st.button("Run RAG", type="primary")
-    with colB:
-        st.button("Clear", on_click=lambda: st.session_state.clear())
+    # IMPORTANT: Use a form to:
+    # 1) remove "Press Enter to apply"
+    # 2) prevent reruns while typing
+    with st.form("query_form", clear_on_submit=False):
+        st.text_area(
+            "Query",
+            placeholder="e.g., What are the categories under PSL?",
+            height=55,
+            key="query_input",
+        )
 
+        colA, colB = st.columns([1, 1])
+        with colA:
+            run_btn = st.form_submit_button("Run RAG", type="primary")
+        with colB:
+            clear_btn = st.form_submit_button("Clear")
+
+    # Handle Clear (safe + immediate)
+    if clear_btn:
+        clear_query()
+        st.rerun()
+
+    # Only run pipeline when Run RAG is clicked
     if not run_btn:
         st.stop()
 
-    if not query.strip():
+    query = (st.session_state.get("query_input") or "").strip()
+    if not query:
         st.error("Please enter a query.")
         st.stop()
 
